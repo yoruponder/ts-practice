@@ -1,0 +1,222 @@
+* { box-sizing: border-box; }
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+td,th { padding: 0; }
+body {
+  width: 100%;
+  overflow-x: hidden;
+  line-height: 1.428;
+}
+input,button,select,textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  outline: none;
+}
+textarea { resize: none; }
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select {
+  padding: 0;
+  margin: 0;
+}
+img { border: 0; }
+ul,li,ol,dl,dd,dt {
+  list-style-position: outside;
+  list-style-type: none;
+  list-style-image: none;
+}
+a { text-decoration: none; }
+a:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.banner {
+  height: 600px;
+  background: url(../img/bg1.png?v=2) center bottom no-repeat;
+}
+.com-width {
+  position: relative;
+  width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+.game-wp {
+  position: absolute;
+  bottom: 84px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 485px;
+}
+.undo-shadow {
+  position: absolute;
+  top: 100px;
+  right: 42px;
+  z-index: 2;
+  display: none;
+  width: 285px;
+  height: 370px;
+  cursor: not-allowed;
+}
+.game-btn {
+  position: absolute;
+  right: 80px;
+  z-index: 1;
+  width: 209px;
+  height: 97px;
+  cursor: pointer;
+  transition: all .1s;
+  &:hover {
+    transform: scale(1.08);
+  }
+}
+.game-start {
+  top: 134px;
+  background: url(../img/bg6.png) no-repeat;
+}
+.game-txt {
+  position: absolute;
+  font-size: 18px;
+  color: #33510f;
+  span {
+    font-size: 33px;
+    color: #fd5f49;
+  }
+}
+.game-time {
+  top: -10px;
+  left: 420px;
+}
+.game-score {
+  top: -10px;
+  left: 672px;
+}
+.mouse-wp {
+  position: absolute;
+  top: 68px;
+  left: 90px;
+  z-index: 3;
+  width: 800px;
+  height: 384px;
+  li {
+    position: absolute;
+    width: 177px;
+    height: 145px;
+    cursor: pointer;
+    background-image: url(../img/mousebg.png);
+    background-position: 0 0;
+  }
+  .m1 {
+    top: -16px;
+    left: 74px;
+  }
+  .m2 {
+    top: -28px;
+    left: 320px;
+  }
+  .m3 {
+    top: -18px;
+    left: 546px;
+  }
+  .m4 {
+    top: 106px;
+    left: 172px;
+  }
+  .m5 {
+    top: 122px;
+    left: 392px;
+  }
+  .m6 {
+    top: 108px;
+    left: 606px;
+  }
+  .m7 {
+    top: 238px;
+    left: 82px;
+  }
+  .m8 {
+    top: 248px;
+    left: 346px;
+  }
+  .m9 {
+    top: 237px;
+    left: 580px;
+  }
+}
+.mouse {
+  width: 177px;
+  height: 145px;
+  background-image: url(../img/mousebg.png);
+  &1 { background-position: -708px 0; }
+  &711 { background-position: -354px 0; }
+  &life { background-position: -531px 0; }
+  &family { background-position: -177px 0; }
+  &2 { background-position: -885px 0; }
+  &3 { background-position: -1062px 0; }
+}
+.game-shadow {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  display: none;
+  background: rgba(0, 0, 0, .8);
+}
+#game-start-time {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  z-index: 21;
+  display: none;
+  width: 483px;
+  height: 142px;
+  margin: -71px 0 0 -241px;
+  background: url(../img/time.png) 0 0;
+  transition: all .2s ease-in;
+  &.game-cd3 {
+    top: 50%;
+    background-position: 0 -568px;
+  }
+  &.game-cd2 {
+    top: 50%;
+    background-position: 0 -426px;
+  }
+  &.game-cd1 {
+    top: 50%;
+    background-position: 0 -284px;
+  }
+  &.game-cd0 {
+    top: 50%;
+    background-position: 0 -142px;
+  }
+  &.game-cdend {
+    top: 50%;
+    animation: tada 1s 2;
+  }
+}
+
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  10%, 20% {
+    -webkit-transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
